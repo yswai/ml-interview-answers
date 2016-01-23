@@ -24,6 +24,8 @@ public class StarServiceTest {
         System.out.println(starService.getStars(4));
         System.out.println("--------------------");
         System.out.println(starService.getStars(5));
+        System.out.println("--------------------");
+        System.out.println(starService.getStars(10));
     }
 
 }
