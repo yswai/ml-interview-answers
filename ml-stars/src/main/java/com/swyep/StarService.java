@@ -9,8 +9,8 @@ public class StarService {
         if (totalRows == 0) return "";
         int columnLength = ((totalRows - 1) * 2) + 1;
         for (int n = 0; n < totalRows; n++) {
-            Double sideLength = Math.floor(columnLength / 2.0d);
             int contentLength = (n * 2) + 1;
+            Double sideLength = Math.floor((columnLength - contentLength) / 2.0d);
             str.append(replicateStringByTimes(" ", sideLength.intValue()))
                     .append(replicateStringByTimes(SYMBOL, contentLength))
                     .append(replicateStringByTimes(" ", sideLength.intValue()))
