@@ -1,5 +1,6 @@
 package com.swyep;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class ArrayQueueImpl<T> extends AbstractArrayBased<T> implements Queue<T> {
@@ -31,6 +32,23 @@ public class ArrayQueueImpl<T> extends AbstractArrayBased<T> implements Queue<T>
         T[] tmp = (T[]) new Object[capacity];
         System.arraycopy(arr, 0, tmp, 0, total);
         arr = tmp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Queue)) return false;
+
+        AbstractArrayBased that = (AbstractArrayBased) o;
+
+        if (!Arrays.equals(arr, that.arr)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return arr != null ? Arrays.hashCode(arr) : 0;
     }
 
 }
