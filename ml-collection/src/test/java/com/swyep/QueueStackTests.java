@@ -40,4 +40,41 @@ public class QueueStackTests {
         assertEquals(Integer.valueOf(88), Integer.valueOf(integerQueue.dequeue()));
     }
 
+    @Test
+    public void testEqual() {
+        Stack<Integer> s1 = new ArrayStackImpl<>();
+        Stack<Integer> s2 = new ArrayStackImpl<>();
+        Queue<Integer> q1 = new ArrayQueueImpl<>();
+        Queue<Integer> q2 = new ArrayQueueImpl<>();
+
+        s1.push(17);
+        s1.push(42);
+        s1.push(88);
+
+        s2.push(17);
+        s2.push(42);
+        s2.push(88);
+
+        q1.enqueue(17);
+        q1.enqueue(42);
+        q1.enqueue(88);
+
+        q2.enqueue(42);
+        q2.enqueue(88);
+
+        assertTrue(s1.equals(q1));
+        assertTrue(s1.equals(s2));
+        assertTrue(s2.equals(s1));
+        assertTrue(q1.equals(q2));
+        assertTrue(q2.equals(q1));
+
+        s1.pop();
+        q1.dequeue();
+
+        assertTrue(s1.equals(s2));
+        assertTrue(s2.equals(s1));
+        assertTrue(q1.equals(q2));
+        assertTrue(q2.equals(q1));
+    }
+
 }
