@@ -1,5 +1,5 @@
 # Answers
 
-This is my answers for interview tests
+This is the answers for interview tests
 
-# Please run Junit tests to see the results
+## Please run Junit tests to see the results

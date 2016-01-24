@@ -2,7 +2,8 @@ package com.swyep;
 
 public interface Stack<T> {
 
-    public void push(T item);
+    public Stack<T> push(T item);
     public T pop();
+    public T peek();
 
 }

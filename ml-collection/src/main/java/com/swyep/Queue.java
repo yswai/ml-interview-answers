@@ -2,7 +2,8 @@ package com.swyep;
 
 public interface Queue<T> {
 
-    public void enqueue(T item);
+    public Queue<T> enqueue(T item);
     public T dequeue();
+    public T peek();
 
 }

@@ -3,12 +3,18 @@ package com.swyep;
 public class ArrayQueueImpl<T> implements Queue<T> {
 
     @Override
-    public void enqueue(T item) {
-
+    synchronized public ArrayQueueImpl<T> enqueue(T item) {
+        return this;
     }
 
     @Override
-    public T dequeue() {
+    synchronized public T dequeue() {
         return null;
     }
+
+    @Override
+    public T peek() {
+       return null;
+    }
+
 }
