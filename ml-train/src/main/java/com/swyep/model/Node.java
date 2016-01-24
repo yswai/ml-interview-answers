@@ -1,11 +1,11 @@
 package com.swyep.model;
 
-public class Vertex {
+public class Node {
 
     final private String id;
     final private String name;
 
-    public Vertex(String id, String name) {
+    public Node(String id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -34,7 +34,7 @@ public class Vertex {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Vertex other = (Vertex) obj;
+        Node other = (Node) obj;
         if (id == null) {
             if (other.id != null)
                 return false;

@@ -3,11 +3,11 @@ package com.swyep.model;
 public class Edge {
 
     private final String id;
-    private final Vertex source;
-    private final Vertex destination;
+    private final Node source;
+    private final Node destination;
     private final int weight;
 
-    public Edge(String id, Vertex source, Vertex destination, int weight) {
+    public Edge(String id, Node source, Node destination, int weight) {
         this.id = id;
         this.source = source;
         this.destination = destination;
@@ -18,11 +18,11 @@ public class Edge {
         return id;
     }
 
-    public Vertex getDestination() {
+    public Node getDestination() {
         return destination;
     }
 
-    public Vertex getSource() {
+    public Node getSource() {
         return source;
     }
 
