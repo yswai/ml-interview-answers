@@ -2,20 +2,14 @@ package com.swyep.model;
 
 public class Edge {
 
-    private final String id;
     private final Node source;
     private final Node destination;
     private final int weight;
 
-    public Edge(String id, Node source, Node destination, int weight) {
-        this.id = id;
+    public Edge(Node source, Node destination, int weight) {
         this.source = source;
         this.destination = destination;
         this.weight = weight;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public Node getDestination() {
@@ -28,6 +22,26 @@ public class Edge {
 
     public int getWeight() {
         return weight;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Edge)) return false;
+
+        Edge edge = (Edge) o;
+
+        if (destination != null ? !destination.equals(edge.destination) : edge.destination != null) return false;
+        if (source != null ? !source.equals(edge.source) : edge.source != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = source != null ? source.hashCode() : 0;
+        result = 31 * result + (destination != null ? destination.hashCode() : 0);
+        return result;
     }
 
     @Override

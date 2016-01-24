@@ -3,19 +3,13 @@ package com.swyep.model;
 public class Node {
 
     final private String id;
-    final private String name;
 
-    public Node(String id, String name) {
+    public Node(String id) {
         this.id = id;
-        this.name = name;
     }
 
     public String getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override
@@ -45,7 +39,7 @@ public class Node {
 
     @Override
     public String toString() {
-        return name;
+        return id;
     }
 
 }
