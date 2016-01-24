@@ -1,4 +1,4 @@
-package com.swyep.model
+package com.swyep.model;
 
 public class Vertex {
 
