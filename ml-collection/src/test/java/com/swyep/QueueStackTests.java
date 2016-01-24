@@ -62,7 +62,6 @@ public class QueueStackTests {
         q2.enqueue(42);
         q2.enqueue(88);
 
-        System.out.println(s1.equals(q1));
         assertFalse(s1.equals(q1));
         assertTrue(s1.equals(s2));
         assertTrue(s2.equals(s1));

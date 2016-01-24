@@ -20,11 +20,11 @@ public class ArrayQueueImpl<T> extends AbstractArrayBased<T> implements Queue<T>
     synchronized public T dequeue() {
         if (total == 0) throw new NoSuchElementException();
         T value = arr[0];
-        for (int i = 1 ; i <= total ; i++) {
+        for (int i = 1 ; i < total ; i++) {
             arr[i - 1] = arr[i];
         }
         total--;
-        if (total > 0 && total == arr.length / (getFactor() * 2)) resize(arr.length / getFactor());
+        if (total > 0 && total == arr.length / getFactor()) resize(arr.length / getFactor());
         return value;
     }
 

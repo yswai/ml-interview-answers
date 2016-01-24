@@ -21,7 +21,7 @@ public class ArrayStackImpl<T> extends AbstractArrayBased<T> implements Stack<T>
         if (total == 0) throw new NoSuchElementException();
         T value = arr[--total];
         arr[total] = null;
-        if (total > 0 && total == arr.length / (getFactor() * 2)) resize(arr.length / getFactor());
+        if (total > 0 && total == arr.length / getFactor()) resize(arr.length / getFactor());
         return value;
     }
 
