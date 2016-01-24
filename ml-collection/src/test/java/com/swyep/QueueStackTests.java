@@ -25,4 +25,11 @@ public class QueueStackTests {
         assertEquals(Integer.valueOf(17), Integer.valueOf(integetStack.pop()));
 
     }
+
+    @Test
+    public void testQueue() {
+
+
+    }
+
 }
