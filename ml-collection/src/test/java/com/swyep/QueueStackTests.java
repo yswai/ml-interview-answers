@@ -7,10 +7,12 @@ import static org.junit.Assert.*;
 public class QueueStackTests {
 
     private Stack<Integer> integetStack;
+    private Queue<Integer> integerQueue;
 
     @Before
     public void setup() {
-        integetStack = new ArrayStackImpl<Integer>();
+        integetStack = new ArrayStackImpl<>();
+        integerQueue = new ArrayQueueImpl<>();
     }
 
     @Test
@@ -29,7 +31,13 @@ public class QueueStackTests {
     @Test
     public void testQueue() {
 
-
+        integerQueue.enqueue(17);
+        integerQueue.enqueue(42);
+        integerQueue.enqueue(88);
+        assertEquals(Integer.valueOf(17), Integer.valueOf(integerQueue.dequeue()));
+        assertEquals(Integer.valueOf(42), Integer.valueOf(integerQueue.dequeue()));
+        assertEquals(Integer.valueOf(88), Integer.valueOf(integerQueue.peek()));
+        assertEquals(Integer.valueOf(88), Integer.valueOf(integerQueue.dequeue()));
     }
 
 }
