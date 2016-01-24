@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 public class ArrayQueueImpl<T> extends AbstractArrayBased<T> implements Queue<T> {
 
-    public ArrayQueueImpl () {
+    public ArrayQueueImpl() {
         arr = (T[]) (new Object[2]);
     }
 
@@ -20,7 +20,7 @@ public class ArrayQueueImpl<T> extends AbstractArrayBased<T> implements Queue<T>
     synchronized public T dequeue() {
         if (total == 0) throw new NoSuchElementException();
         T value = arr[0];
-        for (int i = 1 ; i < total ; i++) {
+        for (int i = 1; i < total; i++) {
             arr[i - 1] = arr[i];
         }
         total--;

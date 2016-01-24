@@ -21,7 +21,7 @@ public class StarService {
 
     private String replicateStringByTimes(String s, int times) {
         StringBuilder str = new StringBuilder();
-        for (int i = 0 ; i < times ; i++) {
+        for (int i = 0; i < times; i++) {
             str.append(s);
         }
         return str.toString();

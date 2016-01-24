@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 public class ArrayStackImpl<T> extends AbstractArrayBased<T> implements Stack<T> {
 
-    public ArrayStackImpl () {
+    public ArrayStackImpl() {
         arr = (T[]) (new Object[2]);
     }
 
@@ -30,6 +30,7 @@ public class ArrayStackImpl<T> extends AbstractArrayBased<T> implements Stack<T>
         System.arraycopy(arr, 0, tmp, 0, total);
         arr = tmp;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
