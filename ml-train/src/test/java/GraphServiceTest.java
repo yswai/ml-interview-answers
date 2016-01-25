@@ -38,6 +38,9 @@ public class GraphServiceTest {
         assertEquals(13, graphService.getFixedPathDistance(graph, "A-D-C"));
         assertEquals(22, graphService.getFixedPathDistance(graph, "A-E-B-C-D"));
         assertEquals(-1, graphService.getFixedPathDistance(graph, "A-E-D"));
+
+        assertEquals(2, graphService.getNumberOfTripsWithMaxStops(graph, new Node("C"), new Node("C"), 3));
+        assertEquals(3, graphService.getNumberOfTripsWithExactStops(graph, new Node("A"), new Node("C"), 4));
     }
 
     private void addLane(String src, String dest, int weight) {
